@@ -22,11 +22,13 @@ function NavLink({
   const isActive =
     href === "/patrocinadores"
       ? pathname === "/patrocinadores"
-      : href === "/recursos"
-        ? pathname.startsWith("/recursos")
-        : href === "/"
-          ? pathname === "/"
-          : false;
+      : href === "/sobre"
+        ? pathname === "/sobre"
+        : href === "/recursos"
+          ? pathname.startsWith("/recursos")
+          : href === "/"
+            ? pathname === "/"
+            : false;
 
   return (
     <Link

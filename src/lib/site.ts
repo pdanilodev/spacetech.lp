@@ -16,7 +16,7 @@ export const SITE = {
 
 export const FOOTER_LINKS = {
   equipe: [
-    { label: "Sobre", href: "/#sobre" },
+    { label: "Sobre", href: "/sobre" },
     { label: "Space Academy", href: "/recursos/space-academy" },
     { label: "Blog", href: "/recursos/blog" },
   ],

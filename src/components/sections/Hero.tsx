@@ -70,7 +70,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4, ease }}
             >
               <Link
-                href="#sobre"
+                href="/sobre"
                 className="text-sm text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
               >
                 Conheça a Space Tech

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AcademyContent } from "@/components/docs/AcademyContent";
+import { AcademyPageClient } from "@/components/docs/AcademyPageClient";
 import { ACADEMY_PAGES } from "@/lib/resources";
 
 export const metadata: Metadata = {
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 
 export default function SpaceAcademyPage() {
   const page = ACADEMY_PAGES[""];
-  return <AcademyContent page={page} />;
+  return <AcademyPageClient slug="" fallback={page} />;
 }

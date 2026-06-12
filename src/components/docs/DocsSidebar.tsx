@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ACADEMY_NAV } from "@/lib/resources";
+import { usePublicAcademyNav } from "@/hooks/usePublicData";
 import { cn } from "@/lib/utils";
-
-const groups = [...new Set(ACADEMY_NAV.map((item) => item.group))];
 
 export function DocsSidebar() {
   const pathname = usePathname();
   const basePath = "/recursos/space-academy";
+  const academyNav = usePublicAcademyNav();
+  const groups = [...new Set(academyNav.map((item) => item.group))];
 
   return (
     <aside className="w-full shrink-0 lg:w-56">
@@ -20,7 +20,7 @@ export function DocsSidebar() {
               {group}
             </p>
             <ul className="space-y-0.5">
-              {ACADEMY_NAV.filter((item) => item.group === group).map(
+              {academyNav.filter((item) => item.group === group).map(
                 (item) => {
                   const href =
                     item.slug === ""

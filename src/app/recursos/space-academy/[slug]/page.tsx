@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AcademyContent } from "@/components/docs/AcademyContent";
+import { AcademyPageClient } from "@/components/docs/AcademyPageClient";
 import { ACADEMY_PAGES } from "@/lib/resources";
 
 interface PageProps {
@@ -32,5 +32,5 @@ export default async function AcademySlugPage({ params }: PageProps) {
 
   if (!page) notFound();
 
-  return <AcademyContent page={page} />;
+  return <AcademyPageClient slug={slug} fallback={page} />;
 }

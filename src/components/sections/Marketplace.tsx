@@ -3,11 +3,8 @@
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Search, ShoppingBag, Star } from "lucide-react";
-import {
-  PRODUCTS,
-  PRODUCT_CATEGORIES,
-  type ProductCategory,
-} from "@/lib/data";
+import { PRODUCT_CATEGORIES, type ProductCategory } from "@/lib/data";
+import { usePublicProducts } from "@/hooks/usePublicData";
 import { FadeIn } from "@/components/shared/FadeIn";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,11 +26,12 @@ function formatPrice(price: number) {
 }
 
 export function Marketplace() {
+  const products = usePublicProducts();
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<ProductCategory>("Todos");
 
   const filtered = useMemo(() => {
-    return PRODUCTS.filter((product) => {
+    return products.filter((product) => {
       const matchesSearch =
         product.title.toLowerCase().includes(search.toLowerCase()) ||
         product.description.toLowerCase().includes(search.toLowerCase());
@@ -41,7 +39,7 @@ export function Marketplace() {
         category === "Todos" || product.category === category;
       return matchesSearch && matchesCategory;
     });
-  }, [search, category]);
+  }, [products, search, category]);
 
   return (
     <section id="marketplace" className="relative py-24 md:py-32">

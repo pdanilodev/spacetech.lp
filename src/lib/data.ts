@@ -10,7 +10,7 @@ import {
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Sobre o Time", href: "/#sobre" },
+  { label: "Sobre o Time", href: "/sobre" },
   { label: "Recursos", href: "/recursos" },
   { label: "Marketplace", href: "/#marketplace" },
   { label: "Patrocinadores", href: "/patrocinadores" },
@@ -97,6 +97,7 @@ export const STATS = [
   { label: "Pessoas Impactadas", value: 2500, suffix: "+" },
   { label: "Projetos Realizados", value: 45, suffix: "+" },
   { label: "Temporadas FTC", value: 4, suffix: "" },
+  { label: "Prêmios Conquistados", value: 12, suffix: "" },
   { label: "Eventos Participados", value: 18, suffix: "+" },
 ] as const;
 

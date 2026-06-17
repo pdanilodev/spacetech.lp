@@ -176,28 +176,52 @@ export interface ImpactStory {
   role: string;
   name: string;
   quote: string;
+  initials: string;
+  accent: string;
+  improvements: string[];
 }
 
 export const IMPACT_STORIES: ImpactStory[] = [
   {
     id: "i1",
-    role: "Programador",
-    name: "Membro da equipe",
+    role: "Programador · Drive Team",
+    name: "Ana L.",
+    initials: "AL",
+    accent: "#22D363",
     quote:
-      "Entrei sem saber programar. Hoje lidero o autônomo e quero cursar Engenharia de Computação. A robótica me deu direção.",
+      "Entrei sem saber programar. Hoje lidero o autônomo e quero cursar Engenharia de Computação.",
+    improvements: [
+      "Aprendeu Java e lógica do zero em 6 meses",
+      "Passou a ensinar novatos no time",
+      "Ganhou confiança para apresentar soluções técnicas",
+    ],
   },
   {
     id: "i2",
-    role: "Mentor técnico",
-    name: "Mentoria SESI",
+    role: "Mentor técnico · SESI",
+    name: "Prof. Carlos M.",
+    initials: "CM",
+    accent: "#38BDF8",
     quote:
-      "Ver estudantes resolverem problemas reais sob pressão de competição é o que mais me motiva. A Space Tech formou líderes, não só robôs.",
+      "Ver estudantes resolverem problemas reais sob pressão de competição é o que mais me motiva na Space Tech.",
+    improvements: [
+      "Acompanhou a formação de 4 gerações de membros",
+      "Viu alunos ingressarem em cursos de engenharia",
+      "Transformou aulas teóricas em projetos reais",
+    ],
   },
   {
     id: "i3",
-    role: "Operador de robô",
-    name: "Membro da equipe",
+    role: "Operador de robô · Capitã",
+    name: "Julia R.",
+    initials: "JR",
+    accent: "#A78BFA",
     quote:
-      "A confiança que ganhei pilotando em arenas lotadas mudou como me apresento em qualquer situação da vida.",
+      "A confiança que ganhei pilotando em arenas lotadas mudou como me apresento em qualquer situação.",
+    improvements: [
+      "Superou o medo de falar em público",
+      "Liderou a aliança campeã regional",
+      "Desenvolveu comunicação sob pressão",
+    ],
   },
 ];

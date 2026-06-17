@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:clean": "rm -rf .next && next dev",
+    "dev:reset": "lsof -ti :3000 -ti :3001 2>/dev/null | xargs kill -9 2>/dev/null; rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

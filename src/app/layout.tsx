@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ChunkLoadRecovery } from "@/components/ChunkLoadRecovery";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { PageReveal } from "@/components/effects/PageReveal";
 import "./globals.css";
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
+        <ChunkLoadRecovery />
         <SmoothScroll>
           <PageReveal>{children}</PageReveal>
         </SmoothScroll>
